@@ -1,0 +1,44 @@
+create database revibe;
+use revibe;
+
+create table users (
+user_id int auto_increment primary key ,
+name varchar(100) ,
+email varchar(100) unique ,
+city varchar(100) ,
+signup_date date );
+
+create table products (
+product_id int auto_increment primary key ,
+product_name varchar(150) ,
+category varchar(50),
+size varchar(10),
+price decimal (10,2) ,
+stock int 
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    order_date DATE,
+    order_status VARCHAR(30),
+    FOREIGN KEY (customer_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE order_items (
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    payment_mode VARCHAR(20),
+    amount decimal(10,2),
+    payment_date DATE,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);

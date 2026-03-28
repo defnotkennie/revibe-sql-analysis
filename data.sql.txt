@@ -1,0 +1,91 @@
+INSERT INTO users (name, email, city, signup_date) VALUES
+('Amit Sharma','amit@gmail.com','Delhi','2025-01-01'),
+('Neha Verma','neha@gmail.com','Mumbai','2025-01-02'),
+('Rahul Khan','rahul@gmail.com','Bangalore','2025-01-03'),
+('Pooja Nair','pooja@gmail.com','Chennai','2025-01-04'),
+('Rohit Gupta','rohit@gmail.com','Delhi','2025-01-05'),
+('Ananya Roy','ananya@gmail.com','Kolkata','2025-01-06'),
+('Karan Mehta','karan@gmail.com','Ahmedabad','2025-01-07'),
+('Simran Kaur','simran@gmail.com','Chandigarh','2025-01-08'),
+('Mohit Jain','mohit@gmail.com','Jaipur','2025-01-09'),
+('Sneha Patel','sneha@gmail.com','Surat','2025-01-10'),
+('Vikram Singh','vikram@gmail.com','Lucknow','2025-01-11'),
+('Alok Mishra','alok@gmail.com','Patna','2025-01-12'),
+('Nidhi Agarwal','nidhi@gmail.com','Noida','2025-01-13'),
+('Saurabh Verma','saurabh@gmail.com','Ghaziabad','2025-01-14'),
+('Riya Sen','riya@gmail.com','Pune','2025-01-15'),
+('Aditya Malhotra','aditya@gmail.com','Delhi','2025-01-16'),
+('Kritika Shah','kritika@gmail.com','Mumbai','2025-01-17'),
+('Yash Tiwari','yash@gmail.com','Kanpur','2025-01-18'),
+('Mehul Joshi','mehul@gmail.com','Vadodara','2025-01-19'),
+('Isha Kapoor','isha@gmail.com','Gurgaon','2025-01-20');
+
+INSERT INTO products (product_name, category, size, price, stock) VALUES
+('Vintage Levi’s Denim Jacket','Jackets','M',1800,1),
+('Oversized Streetwear Hoodie','Hoodies','L',1200,1),
+('Nike Sports T-Shirt','T-Shirts','M',700,1),
+('Zara Slim Fit Jeans','Jeans','32',1500,1),
+('H&M Beige Sweatshirt','Sweatshirts','M',900,1),
+('Adidas Track Pants','Pants','L',1100,1),
+('Vintage Band T-Shirt','T-Shirts','L',1300,1),
+('Uniqlo Flannel Shirt','Shirts','M',1000,1),
+('Levi’s Black Denim Jeans','Jeans','34',1400,1),
+('Streetwear Oversized Hoodie','Hoodies','XL',1350,1),
+('Carhartt Work Jacket','Jackets','L',2200,1),
+('Nike Air Joggers','Pants','M',1200,1),
+('Champion Reverse Weave Hoodie','Hoodies','L',1600,1),
+('Retro Windbreaker','Jackets','M',1500,1),
+('Zara Checked Shirt','Shirts','M',850,1),
+('Vintage Denim Shorts','Shorts','32',950,1),
+('Adidas Sports Jacket','Jackets','L',1700,1),
+('Uniqlo Basic White T-Shirt','T-Shirts','M',600,1),
+('Cargo Streetwear Pants','Pants','32',1400,1),
+('Vintage Oversized Sweater','Sweaters','L',1250,1);
+
+
+INSERT INTO orders (user_id, order_date, order_status) VALUES
+(1,'2025-02-01','Delivered'),
+(2,'2025-02-02','Delivered'),
+(3,'2025-02-03','Delivered'),
+(4,'2025-02-04','Cancelled'),
+(5,'2025-02-05','Delivered'),
+(6,'2025-02-06','Pending'),
+(7,'2025-02-07','Delivered'),
+(8,'2025-02-08','Delivered'),
+(9,'2025-02-09','Delivered'),
+(10,'2025-02-10','Cancelled'),
+(11,'2025-02-11','Delivered'),
+(12,'2025-02-12','Delivered'),
+(13,'2025-02-13','Pending'),
+(14,'2025-02-14','Delivered'),
+(15,'2025-02-15','Delivered'),
+(16,'2025-02-16','Delivered'),
+(17,'2025-02-17','Cancelled'),
+(18,'2025-02-18','Delivered'),
+(19,'2025-02-19','Delivered'),
+(20,'2025-02-20','Delivered');
+
+
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(1,1,1),(2,2,1),(3,3,1),(4,4,1),(5,5,1),
+(6,6,1),(7,7,1),(8,8,1),(9,9,1),(10,10,1),
+(11,11,1),(12,12,1),(13,13,1),(14,14,1),(15,15,1),
+(16,16,1),(17,17,1),(18,18,1),(19,19,1),(20,20,1);
+
+
+INSERT INTO payments (order_id, payment_mode, amount, payment_date) VALUES
+(1,'UPI',1800,'2025-02-01'),
+(2,'Credit Card',1200,'2025-02-02'),
+(3,'UPI',700,'2025-02-03'),
+(5,'Debit Card',900,'2025-02-05'),
+(7,'UPI',1300,'2025-02-07'),
+(8,'Credit Card',1000,'2025-02-08'),
+(9,'UPI',1400,'2025-02-09'),
+(11,'UPI',2200,'2025-02-11'),
+(12,'Debit Card',1200,'2025-02-12'),
+(14,'UPI',1500,'2025-02-14'),
+(15,'Credit Card',850,'2025-02-15'),
+(16,'UPI',950,'2025-02-16'),
+(18,'Debit Card',600,'2025-02-18'),
+(19,'UPI',1400,'2025-02-19'),
+(20,'Credit Card',1250,'2025-02-20');ss
